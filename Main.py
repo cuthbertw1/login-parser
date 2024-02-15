@@ -22,7 +22,7 @@ def newFile():
     print("-" * 70)  # Line separator
     for row in logins:        # reading from employee_logins.csv file
 
-        if int(row[3])>=200  :    # if logins exceed 200 or last name contains i or e
+        if int(row[3])>=200 or "i" in row[1] or "e" in row[1] :    # if logins exceed 200 or last name contains i or e
             totalLogins=row[3]
             IPs=row[4].split(';')
             firstIP=IPs[0]
